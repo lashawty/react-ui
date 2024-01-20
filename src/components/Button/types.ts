@@ -1,22 +1,26 @@
 import {ReactNode} from 'react';
+import {ThemeColor} from '../../types.ts';
+
+export type Variant = 'contained' | 'outlined' | 'text'
+
 
 export interface Props {
     /**
-     * 設置按鈕類型
+     * 設置按鈕類型 button types
      */
-    variant?: 'contained' | 'outlined' | 'text'
+    variant?: Variant
     /**
-     * 客製化樣式
+     * 客製化樣式 custom style(not recommend)
      */
     className?: string
     /**
-     * 內容
+     * 內容 content
      */
     children?: ReactNode
     /**
      * 主題配色，primary、secondary 或是自己傳入色票
      */
-    themeColor?: 'primary' | 'secondary'
+    themeColor?: ThemeColor
     /**
      * 載入中狀態
      */
