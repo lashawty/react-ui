@@ -1,31 +1,32 @@
-import styled, {css, RuleSet} from 'styled-components';
-import {Variant} from './types.ts';
+import styled, {css, type RuleSet} from 'styled-components';
+import {type Variant} from './types.ts';
 
-interface BtnColor {
-    $btnColor: string,
-}
+type BtnColor = {
+	$btnColor: string;
+};
 
 export const containedStyle = css<BtnColor>`
   color: #FFF;
-  background: ${(props) => props.$btnColor};
+  background: ${props => props.$btnColor};
 `;
 
 export const outlinedStyle = css<BtnColor>`
-  color: ${(props) => props.$btnColor};
+  color: ${props => props.$btnColor};
   background: #FFF;
-  border: 1px solid ${(props) => props.$btnColor};
+  border: 1px solid ${props => props.$btnColor};
   
   &:hover {
-    background: ${(props) => `${props.$btnColor}10`};
+    background: ${props => `${props.$btnColor}10`};
   }
 `;
 
 export const textStyle = css<BtnColor>`
-  color: ${(props) => props.$btnColor};
+  color: ${props => props.$btnColor};
   background: #FFF;
   
   &:hover {
-    background: ${(props) => `${props.$btnColor}10`};
+    background: ${props => `${props.$btnColor}`};
+  	color: #fff;
   }
 `;
 
@@ -37,14 +38,13 @@ export const disabledStyle = css`
   }
 `;
 
-
 export const variantMap: Record<Variant, RuleSet<BtnColor>> = {
-    contained: containedStyle,
-    outlined: outlinedStyle,
-    text: textStyle,
+	contained: containedStyle,
+	outlined: outlinedStyle,
+	text: textStyle,
 };
 
-// const StyledCircularProgress = styled(CircularProgress)`
+// Const StyledCircularProgress = styled(CircularProgress)`
 //   margin-right: 8px;
 //   color: ${(props) => (props.$variant === 'contained' ? '#FFF' : props.$color)} !important;
 // `;
@@ -58,8 +58,8 @@ export const EndIcon = styled.span`
 `;
 
 export const StyledButton = styled.button<{
-    $variant: Variant,
-    $btnColor: string,
+	$variant: Variant;
+	$btnColor: string;
 }>`
   display: inline-flex;
   justify-content: center;
@@ -75,11 +75,8 @@ export const StyledButton = styled.button<{
   transition: color 0.2s, background-color 0.2s, border 0.2s, opacity 0.2s ease-in-out;
   cursor: pointer;
   
-  ${(props) => variantMap[props.$variant]}
+  ${props => variantMap[props.$variant]}
   
-  &:hover {
-    opacity: 0.5;
-  }
   
   &:active {
     opacity: 0.7;

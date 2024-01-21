@@ -1,44 +1,43 @@
-import {ReactNode} from 'react';
-import {ThemeColor} from '../../types.ts';
+import {type ReactNode} from 'react';
+import {type ThemeColor} from '../../types.ts';
 
-export type Variant = 'contained' | 'outlined' | 'text'
+export type Variant = 'contained' | 'outlined' | 'text';
 
-
-export interface Props {
-    /**
+export type Props = {
+	/**
      * 設置按鈕類型 button types
      */
-    variant?: Variant
-    /**
+	variant?: Variant;
+	/**
      * 客製化樣式 custom style(not recommend)
      */
-    className?: string
-    /**
+	className?: string;
+	/**
      * 內容 content
      */
-    children?: ReactNode
-    /**
+	children?: ReactNode;
+	/**
      * 主題配色，primary、secondary 或是自己傳入色票
      */
-    themeColor?: ThemeColor
-    /**
+	themeColor?: ThemeColor;
+	/**
      * 載入中狀態
      */
-    isLoading?: boolean
-    /**
+	isLoading?: boolean;
+	/**
      * 禁用狀態
      */
-    isDisabled?: boolean
-    /**
+	isDisabled?: boolean;
+	/**
      * 設置按鈕左方圖示
      */
-    startIcon?: ReactNode
-    /**
+	startIcon?: ReactNode;
+	/**
      * 設置按鈕右方圖示
      */
-    endIcon?: ReactNode
-    /**
+	endIcon?: ReactNode;
+	/**
      * 點擊事件
      */
-    onClick?: () => void,
-}
+	onClick?: () => void;
+};
