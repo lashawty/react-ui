@@ -1,5 +1,5 @@
 import {useState, useRef, useLayoutEffect} from 'react';
-import {useColor} from '../../utils/hooks/useColor';
+import {useColor} from '@/utils/hooks/useColor';
 import {type Props} from './types.ts';
 import {Label, SwitchButton, Thumb} from './styled.tsx';
 

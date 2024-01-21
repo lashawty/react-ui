@@ -1,4 +1,4 @@
-import {type ThemeColor} from '../../types.ts';
+import {type ThemeColor} from '@/components/types.ts';
 
 export type Size = 'default' | 'small';
 

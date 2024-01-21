@@ -8,16 +8,20 @@ type BtnColor = {
 export const containedStyle = css<BtnColor>`
   color: #FFF;
   background: ${props => props.$btnColor};
+	
+	&:hover {
+		opacity: .7;
+	}
 `;
 
 export const outlinedStyle = css<BtnColor>`
   color: ${props => props.$btnColor};
-  background: #FFF;
-  border: 1px solid ${props => props.$btnColor};
-  
-  &:hover {
-    background: ${props => `${props.$btnColor}10`};
-  }
+  background: transparent;
+  border: 3px solid ${props => props.$btnColor};
+
+	&:hover {
+		opacity: .7;
+	}
 `;
 
 export const textStyle = css<BtnColor>`

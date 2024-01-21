@@ -1,5 +1,5 @@
 import {type ReactNode} from 'react';
-import {type ThemeColor} from '../../types.ts';
+import {type ThemeColor} from '@/components/types.ts';
 
 export type Variant = 'contained' | 'outlined' | 'text';
 

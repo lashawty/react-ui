@@ -1,4 +1,4 @@
-import {type Color, type ThemeColor} from '../../types.ts';
+import {type Color, type ThemeColor, type ThemeConfig, type ThemeKey} from '@/components/types.ts';
 
 import {useTheme} from 'styled-components';
 
@@ -12,18 +12,16 @@ type MakeColor = {
 };
 
 export const useColor = (): MakeColor => {
-    // Temp
+	const theme = useTheme() as ThemeConfig;
 
-	// const theme = useTheme();
-	// const makeColor = ({themeColor, isDisabled}: config): Color => {
-	// 	// Const madeColor = theme.color[themeColor] || themeColor;
-	// 	const madeColor = themeColor;
-	// 	return isDisabled
-	// 		? theme.color.disable
-	// 		: madeColor;
-	// };
+	const makeColor = ({themeColor, isDisabled}: Config): Color => {
+		const color = theme[themeColor as ThemeKey] || themeColor as ThemeColor;
+		return isDisabled
+			? theme.disable
+			: color;
+	};
 
 	return {
-		makeColor: () => '#556b2f',
+		makeColor,
 	};
 };

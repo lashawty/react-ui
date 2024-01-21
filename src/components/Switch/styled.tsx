@@ -1,5 +1,5 @@
 import styled, {css} from 'styled-components';
-import {type Color} from '../../types.ts';
+import {type Color} from '@/components/types.ts';
 
 const transitionStyle = css`
   transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, right 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;

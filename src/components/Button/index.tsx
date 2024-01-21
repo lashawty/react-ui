@@ -1,7 +1,7 @@
 import {StyledButton, StartIcon, EndIcon} from './styled';
 
 // Import CircularProgress from '@material-ui/core/CircularProgress';
-import {useColor} from '../../utils/hooks/useColor';
+import {useColor} from '@/utils/hooks/useColor';
 import {type Props} from './types.ts';
 
 /**

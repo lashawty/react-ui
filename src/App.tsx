@@ -1,31 +1,77 @@
-import Button from './components/Button';
-import {ThemeProvider} from 'styled-components';
-import Switch from './components/Switch';
-import {useState} from 'react';
+import styled, {ThemeProvider} from 'styled-components';
+import {theme} from './theme';
+import {DemoSwitch} from '@/demo/DemoSwitch';
+import {DemoButton} from '@/demo/DemoButton.tsx';
+import {type Color} from '@/components/types.ts';
+
+type Demo = {
+	label: string;
+	component: JSX.Element;
+};
 
 function App() {
-	const theme = {
-		main: 'primary',
-	};
+	const ThemeDemo = (
+		<>
+			<ThemeColorDisplay $background={theme.primary}>
+				Primary
+			</ThemeColorDisplay>
 
-	// Switch temp
-	const [isChecked, setIsChecked] = useState(false);
-	const handleOnChange = () => {
-		setIsChecked(!isChecked);
-	};
+			<ThemeColorDisplay $background={theme.secondary}>
+				Secondary
+			</ThemeColorDisplay>
+
+			<ThemeColorDisplay $background={theme.disable}>
+				Disable
+			</ThemeColorDisplay>
+		</>
+	);
+
+	const demos: Demo[] = [
+		{
+			label: 'Theme',
+			component: ThemeDemo,
+		},
+		{
+			label: 'Button',
+			component: <DemoButton />,
+		},
+		{
+			label: 'Switch',
+			component: <DemoSwitch />,
+		},
+	];
 
 	return (
 		<ThemeProvider theme={theme}>
-			<Button variant='text'>button</Button>
-			<Switch
-				checkedChildren='✓'
-				unCheckedChildren='❌'
-				isChecked={isChecked}
-				onChange={handleOnChange}
-			/>
+			{demos.map(demo => (
+				<Box key={demo.label}>
+					<Label>{demo.label}: </Label>
+					{demo.component}
+				</Box>
+			))}
 		</ThemeProvider>
 	);
 }
 
 export default App;
+
+const Label = styled.p`
+	color: #fff;
+`;
+
+const Box = styled.div`
+	padding: 10px;
+	display: flex;
+	align-items: center;
+	gap: 5px;
+`;
+
+const ThemeColorDisplay = styled.div<{
+	$background: Color;
+}>`
+	padding: 5px 10px;
+	background: ${props => props.$background};
+	border-radius: 10px;
+	color: #fff;
+`;
 
