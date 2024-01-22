@@ -2,6 +2,7 @@ import styled, {ThemeProvider} from 'styled-components';
 import {theme} from './theme';
 import {DemoSwitch} from '@/demo/DemoSwitch';
 import {DemoButton} from '@/demo/DemoButton.tsx';
+import {DemoRadio} from '@/demo/DemoRadio.tsx';
 import {type Color} from '@/components/types.ts';
 
 type Demo = {
@@ -38,6 +39,10 @@ function App() {
 		{
 			label: 'Switch',
 			component: <DemoSwitch />,
+		},
+		{
+			label: 'Radio',
+			component: <DemoRadio />,
 		},
 	];
 
