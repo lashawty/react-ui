@@ -3,6 +3,7 @@ import {theme} from './theme';
 import {DemoSwitch} from '@/demo/DemoSwitch';
 import {DemoButton} from '@/demo/DemoButton.tsx';
 import {DemoRadio} from '@/demo/DemoRadio.tsx';
+import {DemoRadioGroup} from './demo/DemoRadioGroup';
 import {type Color} from '@/components/types.ts';
 
 type Demo = {
@@ -44,31 +45,63 @@ function App() {
 			label: 'Radio',
 			component: <DemoRadio />,
 		},
+		{
+			label: 'RadioGroup',
+			component: <DemoRadioGroup />,
+		}
 	];
 
 	return (
 		<ThemeProvider theme={theme}>
-			{demos.map(demo => (
-				<Box key={demo.label}>
-					<Label>{demo.label}: </Label>
-					{demo.component}
-				</Box>
-			))}
+			<Title>Not A Library: React UI</Title>
+			<Intro>Based on React, Typescript, styled-components</Intro>
+			<ListWrapper>
+				{demos.map(demo => (
+					<List key={demo.label}>
+						<Label>{demo.label}: </Label>
+						{demo.component}
+					</List>
+				))}
+			</ListWrapper>
+			<Intro>Designed by Sean</Intro>
 		</ThemeProvider>
 	);
 }
 
 export default App;
 
+const Title = styled.h1`
+	font-size: 30px;
+	font-weight: bold;
+	color: #fff;
+	text-align: center;
+`;
+
+const Intro = styled.p`
+	margin-top: 20px;
+	text-align: center;
+	color: #fff;
+`;
+
 const Label = styled.p`
 	color: #fff;
 `;
 
-const Box = styled.div`
-	padding: 10px;
+const ListWrapper = styled.ul`
+	margin-top: 20px;
+	border: 1px solid #fff;
+	border-radius: 10px;
+`;
+
+const List = styled.li`
+	padding: 20px 10px;
 	display: flex;
 	align-items: center;
 	gap: 5px;
+
+	&:not(:last-child) {
+		border-bottom: 1px solid #fff;
+	}
 `;
 
 const ThemeColorDisplay = styled.div<{
@@ -77,6 +110,6 @@ const ThemeColorDisplay = styled.div<{
 	padding: 5px 10px;
 	background: ${props => props.$background};
 	border-radius: 10px;
-	color: #fff;
+	color: #262626;
 `;
 

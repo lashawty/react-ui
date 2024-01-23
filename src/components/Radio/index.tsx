@@ -1,5 +1,5 @@
 import {type Props} from './types.ts';
-import {RadioRoot, RadioValue, StyledRadio} from '@/components/Radio/styled.tsx';
+import {RadioRoot, Label, StyledRadio, Check} from '@/components/Radio/styled.tsx';
 import {useColor} from '@/utils/hooks/useColor.ts';
 import {useState} from 'react';
 
@@ -20,9 +20,11 @@ const Radio = ({
 	};
 
 	return (
-		<RadioRoot onClick={handleOnClickRadio}>
-			<StyledRadio $color={color} $isChecked={isChecked}/>
-			{value && <RadioValue $color={color}>{value}</RadioValue>}
+		<RadioRoot onClick={handleOnClickRadio} $color={color} $isChecked={isChecked} $isDisabled={isDisabled}>
+			<StyledRadio type='button' role='radio'>
+				<Check />
+			</StyledRadio>
+			<Label>{value}</Label>
 		</RadioRoot>
 	);
 };

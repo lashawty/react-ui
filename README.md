@@ -14,4 +14,9 @@
 ```
 
 ## Usage
-Copy the code from src/components and utils, and custom the style on your own.
+1. Copy the code from below 
+- /components/anyComponent
+- /theme
+- /utils
+
+2. Custom your own style.
