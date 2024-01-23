@@ -48,7 +48,7 @@ function App() {
 		{
 			label: 'RadioGroup',
 			component: <DemoRadioGroup />,
-		}
+		},
 	];
 
 	return (

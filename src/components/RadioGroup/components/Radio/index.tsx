@@ -1,6 +1,5 @@
 import {type Props} from './types.ts';
 import {RadioRoot, Label, StyledRadio, Check} from '@/components/Radio/styled.tsx';
-import {useColor} from '@/utils/hooks/useColor.ts';
 
 /**
  * Toggle Radio

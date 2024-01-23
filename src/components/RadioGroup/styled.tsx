@@ -2,7 +2,7 @@ import styled, {css} from 'styled-components';
 
 export const StyledRadioGroup = styled.div<{
 	$columns: number;
-  $isDisabled?: boolean;
+	$isDisabled?: boolean;
 }>`
   padding: 10px;
   display: grid;
