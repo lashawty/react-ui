@@ -4,6 +4,7 @@ import {DemoSwitch} from '@/demo/DemoSwitch';
 import {DemoButton} from '@/demo/DemoButton.tsx';
 import {DemoRadio} from '@/demo/DemoRadio.tsx';
 import {DemoRadioGroup} from './demo/DemoRadioGroup';
+import {DemoTextField} from './demo/DemoTextField';
 import {type Color} from '@/components/types.ts';
 
 type Demo = {
@@ -24,6 +25,10 @@ function App() {
 
 			<ThemeColorDisplay $background={theme.disable}>
 				Disable
+			</ThemeColorDisplay>
+
+			<ThemeColorDisplay $background={theme.error}>
+				Error
 			</ThemeColorDisplay>
 		</>
 	);
@@ -48,6 +53,10 @@ function App() {
 		{
 			label: 'RadioGroup',
 			component: <DemoRadioGroup />,
+		},
+		{
+			label: 'TextField',
+			component: <DemoTextField />,
 		},
 	];
 

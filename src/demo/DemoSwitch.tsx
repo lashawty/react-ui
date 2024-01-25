@@ -1,5 +1,6 @@
 import {useState} from 'react';
 import Switch from '@/components/Switch';
+import Grid from '@/components/Grid';
 
 export const DemoSwitch = () => {
 	const [isChecked, setIsChecked] = useState(false);
@@ -8,12 +9,25 @@ export const DemoSwitch = () => {
 	};
 
 	return (
-		<Switch
-			themeColor={'secondary'}
-			checkedChildren='✓'
-			unCheckedChildren='❌'
-			isChecked={isChecked}
-			onChange={handleOnChange}
-		/>
+		<Grid column={3}>
+			<Switch
+				themeColor={'#54e35e'}
+				isChecked={isChecked}
+				onChange={handleOnChange}
+			/>
+
+			<Switch
+				themeColor={'#54e35e'}
+				isChecked={false}
+				isDisabled
+			/>
+
+			<Switch
+				themeColor='secondary'
+				isChecked={isChecked}
+				onChange={handleOnChange}
+				size='small'
+			/>
+		</Grid>
 	);
 };

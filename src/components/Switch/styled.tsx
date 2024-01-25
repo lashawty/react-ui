@@ -12,6 +12,7 @@ type SwitchButton = {
 	$isDisabled: boolean;
 };
 
+// eslint-disable-next-line @typescript-eslint/no-redeclare
 export const SwitchButton = styled.div<SwitchButton>`
   position: relative;
   display: inline-flex;
@@ -34,6 +35,7 @@ type Thumb = {
 	$isChecked: boolean;
 };
 
+// eslint-disable-next-line @typescript-eslint/no-redeclare
 export const Thumb = styled.div<Thumb>`
   position: absolute;
   ${props => {
@@ -59,6 +61,7 @@ type Label = {
 	$isChecked: boolean;
 };
 
+// eslint-disable-next-line @typescript-eslint/no-redeclare
 export const Label = styled.div<Label>`
   padding: 0px ${props => props.$padding}px;
   position: absolute;

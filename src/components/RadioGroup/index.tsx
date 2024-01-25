@@ -4,6 +4,9 @@ import Radio from './components/Radio';
 import {useRadio} from './hooks/useRadio.tsx';
 import {useColor} from '@/utils/hooks/useColor.ts';
 
+/**
+ * `RadioGroup`
+ */
 const RadioGroup = ({
 	radios = [],
 	columns = 1,

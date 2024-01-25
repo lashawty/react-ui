@@ -1,4 +1,3 @@
-/* eslint-disable no-multiple-empty-lines */
 import styled, {css} from 'styled-components';
 import {type Color} from '@/components/types.ts';
 
@@ -24,7 +23,6 @@ export const StyledRadio = styled.button`
   pointer-events: none;
   
 `;
-
 
 export const Label = styled.label`
   pointer-events: none;

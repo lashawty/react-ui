@@ -1,8 +1,8 @@
 import {type Props} from './types.ts';
-import {RadioRoot, Label, StyledRadio, Check} from '@/components/Radio/styled.tsx';
+import {RadioRoot, Label, StyledRadio, Check} from './styled.tsx';
 
 /**
- * Toggle Radio
+ * Radio
  */
 const Radio = ({
 	isDisabled = false,

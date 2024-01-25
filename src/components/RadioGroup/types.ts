@@ -8,15 +8,10 @@ export type Radio = {
 
 export type Props = {
 	columns?: number;
-
 	value?: string | number;
-
 	radios?: Radio[];
-
 	onChange?: () => void;
-
 	themeColor?: ThemeColor;
-
 	isDisabled?: boolean;
 };
 

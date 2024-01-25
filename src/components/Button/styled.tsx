@@ -26,7 +26,7 @@ export const outlinedStyle = css<BtnColor>`
 
 export const textStyle = css<BtnColor>`
   color: ${props => props.$btnColor};
-  background: #FFF;
+  background: transparent;
   
   &:hover {
     background: ${props => `${props.$btnColor}`};
@@ -42,16 +42,19 @@ export const disabledStyle = css`
   }
 `;
 
+const loadingStyled = css`
+	cursor: wait;
+	
+	&:hover, &:active {
+		opacity: 1;
+	}
+`;
+
 export const variantMap: Record<Variant, RuleSet<BtnColor>> = {
 	contained: containedStyle,
 	outlined: outlinedStyle,
 	text: textStyle,
 };
-
-// Const StyledCircularProgress = styled(CircularProgress)`
-//   margin-right: 8px;
-//   color: ${(props) => (props.$variant === 'contained' ? '#FFF' : props.$color)} !important;
-// `;
 
 export const StartIcon = styled.span`
   margin-right: 8px;
@@ -64,6 +67,7 @@ export const EndIcon = styled.span`
 export const StyledButton = styled.button<{
 	$variant: Variant;
 	$btnColor: string;
+	$isLoading: boolean;
 }>`
   display: inline-flex;
   justify-content: center;
@@ -89,4 +93,7 @@ export const StyledButton = styled.button<{
   &:disabled {
     ${disabledStyle}
   }
+	
+  ${props => props.$isLoading && loadingStyled}
+	
 `;

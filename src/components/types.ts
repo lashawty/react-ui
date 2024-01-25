@@ -10,7 +10,7 @@ type HEX = `#${string}`;
 
 export type Color = RGB | RGBA | HEX;
 
-export type ThemeKey = 'primary' | 'secondary' | 'disable';
+export type ThemeKey = 'primary' | 'secondary' | 'disable' | 'error';
 export type ThemeColor = ThemeKey | Color;
 
 export type ThemeConfig = Record<ThemeKey, Color>;
