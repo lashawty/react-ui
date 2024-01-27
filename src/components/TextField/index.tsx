@@ -1,5 +1,5 @@
 import type {Props} from './types';
-import {StyledTextarea, Textarea} from '@/components/Textfield/styled.tsx';
+import {StyledTextarea, Textarea} from './styled.tsx';
 import {useColor} from '@/utils/hooks/useColor.ts';
 
 /**
