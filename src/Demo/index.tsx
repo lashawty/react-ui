@@ -5,6 +5,7 @@ import {DemoSwitch} from './components/DemoSwitch.tsx';
 import {DemoTextField} from './components/DemoTextField.tsx';
 import {DemoRadioGroup} from './components/DemoRadioGroup.tsx';
 import {DemoRadio} from './components/DemoRadio.tsx';
+import {DemoInput} from '@/Demo/components/DemoInput.tsx';
 import Grid from '@/components/Grid';
 
 type Config = {
@@ -61,6 +62,10 @@ const Demo = () => {
 		{
 			label: 'TextField',
 			component: <DemoTextField />,
+		},
+		{
+			label: 'Input',
+			component: <DemoInput />,
 		},
 	];
 

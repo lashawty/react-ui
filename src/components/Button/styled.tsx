@@ -78,6 +78,7 @@ export const StyledButton = styled.button<{
   outline: none;
   
   min-width: 100px;
+  width: 100%;
   height: 36px;
   
   transition: color 0.2s, background-color 0.2s, border 0.2s, opacity 0.2s ease-in-out;
