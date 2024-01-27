@@ -8,4 +8,5 @@ export type Props = {
 	themeColor?: ThemeColor;
 	onChange?: () => void;
 	size?: Size;
+	content?: string;
 };

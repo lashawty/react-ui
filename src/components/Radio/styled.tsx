@@ -14,13 +14,14 @@ export const StyledRadio = styled.button`
   display: flex;
   justify-content: center;
   align-items: center;
-
+  flex-shrink: 0;
+  
   box-sizing: border-box;
   border-radius: 100%;
   border: 1px solid #fff;
 
   width: 15px;
-  aspect-ratio: 1;
+  height: 15px;
   pointer-events: none;
   
 `;
@@ -28,6 +29,7 @@ export const StyledRadio = styled.button`
 
 export const Label = styled.label`
   pointer-events: none;
+  user-select: none;
 `;
 
 export const RadioRoot = styled.div<{

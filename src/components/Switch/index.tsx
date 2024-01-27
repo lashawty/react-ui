@@ -11,6 +11,7 @@ const Switch = ({
 	isDisabled = false,
 	themeColor = 'primary',
 	size = 'default',
+	content,
 	onChange,
 }: Props) => {
 	const labelRef = useRef<HTMLDivElement>(null);
@@ -48,7 +49,9 @@ const Switch = ({
 				$labelWidth={labelWidth}
 				$switchWidth={switchWidth}
 				$isChecked={isChecked}
-			/>
+			>
+				{content}
+			</Label>
 		</SwitchButton>
 	);
 };

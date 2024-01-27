@@ -5,11 +5,12 @@ import {type Props} from './types.ts';
  * `Grid` layout component
  */
 const Grid = ({
-	column = 1,
+	column = 4,
+	columnMobile = 2,
 	gap = 20,
 	children,
 }: Props) => (
-	<StyledGrid $column={column} $gap={gap}>
+	<StyledGrid $column={column} $gap={gap} $columnMobile={columnMobile}>
 		{children}
 	</StyledGrid>
 );

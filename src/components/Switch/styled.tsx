@@ -63,10 +63,11 @@ type Label = {
 
 // eslint-disable-next-line @typescript-eslint/no-redeclare
 export const Label = styled.div<Label>`
-  padding: 0px ${props => props.$padding}px;
+  padding: 0 ${props => props.$padding}px;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
+  user-select: none;
   ${props => {
 		if (props.$isChecked) {
 			return `right: ${props.$switchWidth - props.$labelWidth}px;`;

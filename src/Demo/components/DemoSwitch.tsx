@@ -20,6 +20,7 @@ export const DemoSwitch = () => {
 				themeColor={'#54e35e'}
 				isChecked={false}
 				isDisabled
+				content='Disable'
 			/>
 
 			<Switch

@@ -19,7 +19,7 @@ export const StyledRadio = styled.button`
   border: 1px solid #fff;
 
   width: 15px;
-  aspect-ratio: 1;
+  height: 15px;
   pointer-events: none;
   
 `;

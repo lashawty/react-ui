@@ -15,6 +15,7 @@ const handleOnChange = () => {
     themeColor={'#54e35e'}
     isChecked={false}
     isDisabled
+    content='Disable'
 />
 
 <Switch
