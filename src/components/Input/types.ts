@@ -6,4 +6,5 @@ export type Props = {
 	placeholder?: string;
 	themeColor?: ThemeColor;
 	isDisabled?: boolean;
+	label?: string;
 };

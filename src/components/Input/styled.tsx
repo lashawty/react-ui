@@ -1,8 +1,9 @@
-import styled from 'styled-components';
+import styled, {css} from 'styled-components';
 import {type Color} from '@/components/types.ts';
 
 export const StyledInput = styled.input<{
 	$color: Color;
+	$isDisabled: boolean;
 }>`
 	padding: 10px 10px;
 	border-radius: 5px;
@@ -13,10 +14,11 @@ export const StyledInput = styled.input<{
 	outline: 2px solid transparent;
 	outline-offset: 2px;
 	width: 100%;
-	height: 100%;
+	flex: 1;
+	min-height: 40px;
 	
 	&:active, &:focus {
-	border: 1px solid ${({$color}) => $color};  
+		border: 1px solid ${({$color}) => $color};  
 	}
 	
 	/*Range Reset*/
@@ -111,4 +113,24 @@ export const StyledInput = styled.input<{
 	&[type="time"]::-webkit-calendar-picker-indicator {
 		filter: invert(1);
 	}
+
+	${({$isDisabled, theme}) => $isDisabled && css`
+		pointer-events: none;
+		&:active, &:focus {
+			border: 1px solid ${theme.disabled};
+		}
+	`};
+`;
+
+export const Root = styled.div`
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	height: 100%;
+`;
+
+export const Label = styled.label`
+	margin-bottom: 10px;
+	display: block;
+	color: #fff;
 `;

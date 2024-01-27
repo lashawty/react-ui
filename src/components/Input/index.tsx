@@ -1,4 +1,4 @@
-import {StyledInput} from './styled';
+import {Label, Root, StyledInput} from './styled';
 
 import {useColor} from '@/utils/hooks/useColor';
 import {type Props} from './types.ts';
@@ -11,7 +11,8 @@ const Input = ({
 	themeColor = 'primary',
 	isDisabled = false,
 	type = 'text',
-	placeholder = type?.toUpperCase(),
+	placeholder = 'Enter your text here',
+	label = '',
 }: Props) => {
 	const {makeColor} = useColor();
 	const color = makeColor({themeColor, isDisabled});
@@ -26,14 +27,18 @@ const Input = ({
 	};
 
 	return (
-		<StyledInput
-			ref={ref}
-			onInput={handleChangeValue}
-			data-value={value}
-			type={type}
-			$color={color}
-			placeholder={placeholder}
-		/>
+		<Root>
+			<Label>{label}</Label>
+			<StyledInput
+				ref={ref}
+				onInput={handleChangeValue}
+				data-value={value}
+				type={type}
+				$color={color}
+				$isDisabled={isDisabled}
+				placeholder={placeholder}
+			/>
+		</Root>
 	);
 };
 
