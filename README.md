@@ -3,7 +3,7 @@
 ## Intro
 [React UI](https://react-ui-ten.vercel.app/)
 
-- Not a library, just for saving time to avoid overwriting-hell
+- Not a library, just for saving time to avoid overwriting-hell when using any UI library
 - A UI codebase for React, based on Typescript & styled-components
 - The repo is for developers who would like to build their own UI components like [shadcn/ui]("https://ui.shadcn.com/")
 
@@ -14,9 +14,11 @@
 ```
 
 ## Usage
-1. Copy the code from below 
-- /components/anyComponent
-- /theme
-- /utils
+1. Copy the code from the repo
+- src/components/anyComponent
+- src/components/types.ts
+- src/theme
+- src/utils
+- src/breakpoints (optional)
 
 2. Custom your own style.
