@@ -6,6 +6,7 @@ import {DemoTextField} from './components/DemoTextField.tsx';
 import {DemoRadioGroup} from './components/DemoRadioGroup.tsx';
 import {DemoRadio} from './components/DemoRadio.tsx';
 import {DemoInput} from '@/Demo/components/DemoInput.tsx';
+import {DemoSlider} from '@/Demo/components/DemoSlider.tsx';
 import Grid from '@/components/Grid';
 
 type Config = {
@@ -66,6 +67,10 @@ const Demo = () => {
 		{
 			label: 'Input',
 			component: <DemoInput />,
+		},
+		{
+			label: 'Slider',
+			component: <DemoSlider />,
 		},
 	];
 
