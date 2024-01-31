@@ -5,7 +5,7 @@ const thumbSize = 20;
 
 const railStyle = css`
   background: #ddd; /* rail color */
-  width: 320px;
+  width: 100%;
   height: 6px;
   border-radius: 5px;
 `;
@@ -67,6 +67,5 @@ export const StyledSlider = styled.input<{
 
 	${({$isDisabled})=> $isDisabled && css`
 		pointer-events: none;
-		cursor: not-allowed;
 	`}
 `;

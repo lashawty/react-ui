@@ -1,4 +1,5 @@
 ## Usage
 ```tsx
-<Slider />
+  <Slider />
+  <Slider isDisabled defaultValue={10}/>
 ```
