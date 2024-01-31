@@ -20,7 +20,7 @@ const link = 'https://github.com/lashawty/react-ui/tree/main/src/components/';
 
 const Demo = () => {
 	const ThemeDemo = (
-		<Grid column={4} columnMobile={2}>
+		<Grid column={4} columnMobile={1}>
 			<ThemeColorDisplay $background={theme.primary}>
                 Primary
 			</ThemeColorDisplay>
