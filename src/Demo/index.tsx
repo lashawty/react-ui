@@ -8,6 +8,7 @@ import {DemoRadio} from './components/DemoRadio.tsx';
 import {DemoInput} from '@/Demo/components/DemoInput.tsx';
 import {DemoSlider} from '@/Demo/components/DemoSlider.tsx';
 import {DemoRate} from '@/Demo/components/DemoRate.tsx';
+import {DemoUpload} from '@/Demo/components/DemoUpload.tsx';
 import Grid from '@/components/Grid';
 
 type Config = {
@@ -76,6 +77,10 @@ const Demo = () => {
 		{
 			label: 'Rate',
 			component: <DemoRate />,
+		},
+		{
+			label: 'Upload',
+			component: <DemoUpload />,
 		},
 	];
 
