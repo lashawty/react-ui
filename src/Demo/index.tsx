@@ -5,11 +5,12 @@ import {DemoSwitch} from './components/DemoSwitch.tsx';
 import {DemoTextField} from './components/DemoTextField.tsx';
 import {DemoRadioGroup} from './components/DemoRadioGroup.tsx';
 import {DemoRadio} from './components/DemoRadio.tsx';
-import {DemoInput} from '@/Demo/components/DemoInput.tsx';
-import {DemoSlider} from '@/Demo/components/DemoSlider.tsx';
-import {DemoRate} from '@/Demo/components/DemoRate.tsx';
-import {DemoUpload} from '@/Demo/components/DemoUpload.tsx';
+import {DemoInput} from './components/DemoInput.tsx';
+import {DemoSlider} from './components/DemoSlider.tsx';
+import {DemoRate} from './components/DemoRate.tsx';
+import {DemoUpload} from './components/DemoUpload.tsx';
 import Grid from '@/components/Grid';
+import {type Color} from '@/components/types.ts';
 
 type Config = {
 	label: string;
@@ -22,21 +23,11 @@ const link = 'https://github.com/lashawty/react-ui/tree/main/src/components/';
 const Demo = () => {
 	const ThemeDemo = (
 		<Grid column={4} columnMobile={1}>
-			<ThemeColorDisplay $background={theme.primary}>
-                Primary
-			</ThemeColorDisplay>
-
-			<ThemeColorDisplay $background={theme.secondary}>
-                Secondary
-			</ThemeColorDisplay>
-
-			<ThemeColorDisplay $background={theme.disable}>
-                Disable
-			</ThemeColorDisplay>
-
-			<ThemeColorDisplay $background={theme.error}>
-                Error
-			</ThemeColorDisplay>
+			{Object.values(theme).map((color: Color, index) => (
+				<ThemeColorDisplay key={index} $background={color}>
+					{Object.keys(theme)[index]}
+				</ThemeColorDisplay>
+			))}
 		</Grid>
 	);
 
@@ -85,7 +76,7 @@ const Demo = () => {
 	];
 
 	return (
-		<>
+		<section>
 			<Title>Not A Library</Title>
 			<Intro>React UI</Intro>
 			<Intro>Based on React, Typescript, styled-components</Intro>
@@ -101,7 +92,7 @@ const Demo = () => {
 				})}
 			</ListWrapper>
 			<Intro>Designed by Sean</Intro>
-		</>
+		</section>
 	);
 };
 
