@@ -9,6 +9,7 @@ import {DemoInput} from './components/DemoInput.tsx';
 import {DemoSlider} from './components/DemoSlider.tsx';
 import {DemoRate} from './components/DemoRate.tsx';
 import {DemoUpload} from './components/DemoUpload.tsx';
+import {DemoBadge} from './components/DemoBadge.tsx';
 import Grid from '@/components/Grid';
 import {type Color} from '@/components/types.ts';
 
@@ -72,6 +73,10 @@ const Demo = () => {
 		{
 			label: 'Upload',
 			component: <DemoUpload />,
+		},
+		{
+			label: 'Badge',
+			component: <DemoBadge />,
 		},
 	];
 

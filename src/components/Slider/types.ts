@@ -1,5 +1,4 @@
 import {type ThemeColor} from '@/components/types.ts';
-import {type ChangeEvent} from 'react';
 
 export type Props = {
 	defaultValue?: number;
@@ -7,7 +6,7 @@ export type Props = {
 	max?: number;
 	step?: number;
 	themeColor?: ThemeColor;
-	onChange?: (event: ChangeEvent) => void;
+	onChange?: () => void;
 	isDisabled?: boolean;
 };
 

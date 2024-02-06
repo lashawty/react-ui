@@ -1,4 +1,4 @@
-import {useRef, useState, type ChangeEvent} from 'react';
+import {useRef, useState} from 'react';
 import {useColor} from '@/utils/hooks/useColor';
 import {StyledSlider} from './styled';
 import {type Props} from './types';
@@ -17,10 +17,10 @@ const Slider = ({
 	const {makeColor} = useColor();
 	const color = makeColor({themeColor, isDisabled});
 
-	const handleOnChange = (event: ChangeEvent) => {
+	const handleOnChange = () => {
 		setCurrentValue(Number(sliderRef?.current?.value));
 		if (onChange) {
-			onChange(event);
+			onChange();
 		}
 	};
 
