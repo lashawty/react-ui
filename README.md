@@ -1,7 +1,6 @@
-# React UI
+# [React UI](https://react-ui-ten.vercel.app/)
 
 ## Intro
-[React UI](https://react-ui-ten.vercel.app/)
 
 - Not a library, just for saving time to avoid overwriting-hell when using any UI library
 - A UI codebase for React, based on Typescript & styled-components
