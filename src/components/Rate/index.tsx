@@ -1,4 +1,4 @@
-import {useRate} from './useRate';
+import {useRate} from './hooks';
 import {useColor} from '@/utils/hooks/useColor';
 import {RateWrapper, CharacterWrapper, CharacterFirst, CharacterSecond} from './styled';
 import {type Props} from './types';

@@ -4,7 +4,7 @@ import {useTheme} from 'styled-components';
 
 type Config = {
 	themeColor: ThemeColor;
-	isDisabled: boolean;
+	isDisabled?: boolean;
 };
 
 type MakeColor = {
@@ -14,7 +14,7 @@ type MakeColor = {
 export const useColor = (): MakeColor => {
 	const theme = useTheme() as ThemeConfig;
 
-	const makeColor = ({themeColor, isDisabled}: Config): Color => {
+	const makeColor = ({themeColor, isDisabled = false}: Config): Color => {
 		const color = theme[themeColor as ThemeKey] || themeColor as ThemeColor;
 		return isDisabled
 			? theme.disable

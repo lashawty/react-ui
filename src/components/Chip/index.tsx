@@ -16,7 +16,7 @@ const Chip = ({
 	onDelete,
 }: Props) => {
 	const {makeColor} = useColor();
-	const color = makeColor({themeColor, isDisabled: false});
+	const color = makeColor({themeColor});
 	const [isVisible, setIsVisible] = useState(true);
 
 	const handleOnDelete = () => {

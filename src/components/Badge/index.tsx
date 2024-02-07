@@ -16,7 +16,7 @@ const Badge = ({
 	...props
 }: Props) => {
 	const {makeColor} = useColor();
-	const color = makeColor({themeColor, isDisabled: false});
+	const color = makeColor({themeColor});
 
 	const makeBadgeContent = () => {
 		if (isShowZero && badgeContent === 0) {
