@@ -65,7 +65,7 @@ export const StyledSlider = styled.input<{
 		}
 	}
 
-	${({$isDisabled})=> $isDisabled && css`
+	${({$isDisabled}) => $isDisabled && css`
 		pointer-events: none;
 	`}
 `;

@@ -1,4 +1,3 @@
-/* eslint-disable no-multiple-empty-lines */
 import styled, {css} from 'styled-components';
 import {type Color} from '@/components/types.ts';
 

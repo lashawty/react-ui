@@ -1,4 +1,3 @@
-
 type Key = 'sm' | 'md' | 'lg' | 'xl';
 type Breakpoints = 575 | 768 | 1024 | 1400;
 type MediaQuery = `@media (min-width: ${Breakpoints}px)`;
