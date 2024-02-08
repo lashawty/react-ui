@@ -45,9 +45,11 @@ export const Link = styled.a`
 `;
 
 export const ListWrapper = styled.ul`
-	margin-top: 20px;
+	margin: 20px auto 0;
 	border: 1px solid #fff;
 	border-radius: 10px;
+	max-width: 1000px;
+	width: 100%;
 `;
 
 export const List = styled.li`
