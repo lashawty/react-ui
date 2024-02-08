@@ -8,7 +8,7 @@ const Children = () => <p>Hover Me</p>;
 const placements: Placement[] = ['top', 'left', 'bottom', 'right'];
 
 export const DemoTooltip = () => (
-	<Grid>
+	<Grid columnMobile={1}>
 		{
 			placements.map(p => (
 				<Tooltip

@@ -1,6 +1,6 @@
 import {type ChangeEvent, useRef, useState} from 'react';
 import {type Props} from './types';
-import {InputFile, Root, Label, LabelContainer, DefalutLabel} from './styled';
+import {InputFile, Root, Label, LabelContainer, DefaultLabel} from './styled';
 
 /**
  * `Upload`
@@ -57,7 +57,7 @@ const Upload = ({
 				accept={accept}
 				multiple={multiple}
 			/>
-			{isFile ? renderFileName() : <DefalutLabel>{defaultText}</DefalutLabel>}
+			{isFile ? renderFileName() : <DefaultLabel>{defaultText}</DefaultLabel>}
 		</Root>
 	);
 };
