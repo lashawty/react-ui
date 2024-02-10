@@ -13,4 +13,5 @@ export const InfiniteScrollWrapper = styled.div<{
 	width: 100%;
 	max-height: ${({$height}) => $height}px;
 	overflow: auto;
+	overscroll-behavior: contain;
 `;
