@@ -15,6 +15,7 @@ import {DemoTooltip} from './components/DemoTooltip.tsx';
 import {DemoAccordion} from './components/DemoAccordion.tsx';
 import {DemoCarousel} from './components/DemoCarousel.tsx';
 import {DemoTable} from './components/DemoTable.tsx';
+import {DemoInfiniteScroll} from '@/Demo/components/DemoInfiniteScroll.tsx';
 import Grid from '@/components/Grid';
 import Accordion from '@/components/Accordion';
 import {type Color} from '@/components/types.ts';
@@ -106,6 +107,10 @@ const Demo = () => {
 		{
 			label: 'Table',
 			component: <DemoTable />,
+		},
+		{
+			label: 'InfiniteScroll',
+			component: <DemoInfiniteScroll />,
 		},
 	];
 
