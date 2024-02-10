@@ -1,5 +1,3 @@
-import {type ReactNode} from 'react';
-
 export type TableIndex = {
 	name: string;
 	age: number;
@@ -11,7 +9,6 @@ export type TableTitle = {
 	title: string;
 	width: number | string;
 	isFixed?: boolean;
-	render?: ReactNode;
 };
 
 export type Props = {

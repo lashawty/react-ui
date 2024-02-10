@@ -33,13 +33,10 @@ const Table = ({
 							{
 								columns.map((column, index) => {
 									const {dataIndex} = column;
-									const foundCellData = column.render
-										// ? column.render(data[dataIndex])
-										? column.render
-										: data[dataIndex];
+
 									return (
 										<Td key={index} $isFixed={Boolean(column.isFixed)}>
-											{foundCellData}
+											{data[dataIndex]}
 										</Td>
 									);
 								})
