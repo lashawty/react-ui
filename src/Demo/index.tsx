@@ -18,6 +18,7 @@ import {DemoTable} from './components/DemoTable.tsx';
 import {DemoInfiniteScroll} from '@/Demo/components/DemoInfiniteScroll.tsx';
 import {DemoBreadcrumb} from '@/Demo/components/DemoBreadcrumb.tsx';
 import {DemoDropdown} from '@/Demo/components/DemoDropdown.tsx';
+import {DemoSelect} from '@/Demo/components/DemoSelect.tsx';
 import Grid from '@/components/Grid';
 import Accordion from '@/components/Accordion';
 import {type Color} from '@/components/types.ts';
@@ -121,6 +122,10 @@ const Demo = () => {
 		{
 			label: 'Dropdown',
 			component: <DemoDropdown />,
+		},
+		{
+			label: 'Select',
+			component: <DemoSelect />,
 		},
 	];
 
