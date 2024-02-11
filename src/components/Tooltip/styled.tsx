@@ -1,6 +1,7 @@
-import styled, {type RuleSet, css, keyframes} from 'styled-components';
+import styled, {type RuleSet, css} from 'styled-components';
 import {type Placement} from './types';
 import {type Color} from '@/components/types.ts';
+import {fadeIn, fadeOut} from '@/utils/commonStyle';
 
 type StyleProps = {
 	$gap: number;
@@ -46,7 +47,7 @@ const leftStyle = css<StyleProps>`
 
   ${TooltipArrow} {
     top: 50%;
-    right: 0px;
+    right: 0;
     transform: translate(50%, -50%);
   }
 `;
@@ -58,7 +59,7 @@ const rightStyle = css<StyleProps>`
 
   ${TooltipArrow} {
     top: 50%;
-    left: 0px;
+    left: 0;
     transform: translate(-50%, -50%);
   }
 `;
@@ -70,24 +71,7 @@ const placementStyleMap: Record<Placement, RuleSet<StyleProps>> = {
 	right: rightStyle,
 };
 
-const fadeIn = keyframes`
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-`;
 
-const fadeOut = keyframes`
-  from {
-    opacity: 1;
-  }
-
-  to {
-    opacity: 0;
-  }
-`;
 
 export const TooltipWrapper = styled.div<{
 	$isVisible: boolean;
