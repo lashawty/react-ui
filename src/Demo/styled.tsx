@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 import {type Color} from '@/components/types.ts';
-import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 
 export const Title = styled.h1`
 	font-size: 30px;
@@ -15,30 +14,11 @@ export const Intro = styled.p`
 	color: #fff;
 `;
 
-export const AccordionHeader = styled.div`
-	padding: 10px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	width: 100%;
-`;
-
-export const Arrow = styled(KeyboardArrowDownIcon)<{
-	$isExpand: boolean;
-}>`
-	color: #fff;
-	transform: rotate(${({$isExpand}) => $isExpand ? 180 : 0}deg);
-`;
-
-export const AccordionPanel = styled(AccordionHeader)`
-	padding: 50px;
-`;
-
 export const Link = styled.a`
+	margin-bottom: 20px;
 	display: block;
 	color: #fff;
 	transition: transform .4s;
-	
 	&:hover{
 		transform: scale(1.1);
 	}
@@ -55,9 +35,9 @@ export const ListWrapper = styled.ul`
 export const List = styled.li`
 	padding: 20px 10px;
 	display: flex;
+	flex-direction: column;
 	align-items: center;
-	gap: 5px;
-
+	
 	&:not(:last-child) {
 		border-bottom: 1px solid #fff;
 	}

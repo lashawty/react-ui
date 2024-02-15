@@ -35,6 +35,7 @@ export const OverlayWrapper = styled.div<{
   border-radius: 4px;
   box-shadow: 0 3px 6px -4px rgb(0 0 0 / 12%), 0 6px 16px 0 rgb(0 0 0 / 8%), 0 9px 28px 8px rgb(0 0 0 / 5%);
   animation: ${({$isOpen}) => ($isOpen ? fadeIn : fadeOut)} .3s ease-in-out forwards;
+	pointer-events: ${({$isOpen}) => ($isOpen ? 'auto' : 'none')};
   ${({$placement}) => placementStyleMap[$placement]}
 `;
 
@@ -43,4 +44,5 @@ export const DropdownButton = styled.div`
 
 export const DropdownWrapper = styled.div`
 	position: relative;
+	width: 100%;
 `;

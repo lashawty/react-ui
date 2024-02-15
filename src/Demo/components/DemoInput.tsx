@@ -4,7 +4,7 @@ import Grid from '@/components/Grid';
 const prefix = 'Type: ';
 
 export const DemoInput = () => (
-	<Grid column={5} columnMobile={1}>
+	<Grid column={2} columnMobile={1}>
 		<Input type='text' label={`${prefix}text`}/>
 		<Input type='file' label={`${prefix}file`}/>
 		<Input type='color' label={`${prefix}color`}/>
