@@ -31,7 +31,6 @@ export const StyledChip = styled.div<{
   justify-content: space-evenly;
   border-radius: 50px;
   border: 1px solid ${({$color}) => $color};
-  height: 100%;
   width: 120px;
   ${({$variant}) => variantMap[$variant] || variantMap.contained}
 `;
