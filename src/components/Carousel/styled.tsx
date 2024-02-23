@@ -25,11 +25,12 @@ export const Slide = styled.div<{
   left: 0;
   transform: translate3d(${({$left}) => $left}px, 0, 0);
   transition: all 0.4s ease;
+  will-change: transform;
 `;
 
 export const ControlButtons = styled.div`
   position: absolute;
-  z-index: 10;
+  z-index: 1;
   left: 0;
   top: 0;
   display: flex;
@@ -45,7 +46,7 @@ export const Dots = styled.div`
   align-items: center;
   gap: 6px;
   justify-content: center;
-  z-index: 10;
+  z-index: 1;
   left: 50%;
   bottom: 8px;
   transform: translateX(-50%);
