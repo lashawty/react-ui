@@ -12,9 +12,9 @@ const Drawer = ({
 	onClose,
 	animationDuration = 200,
 }: Props) => {
-	const {isActive} = useDrawer(isOpen, animationDuration);
+	const {isRemoveDom} = useDrawer(isOpen, animationDuration);
 
-	return !isActive && (
+	return !isRemoveDom && (
 		<Wrapper>
 			<Mask
 				$isOpen={isOpen}

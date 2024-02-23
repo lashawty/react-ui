@@ -1,8 +1,9 @@
-import {useToggleActive} from '@/utils/hooks';
+import {useToggleActive, useLockBodyScroll} from '@/utils/hooks';
 import {useEffect} from 'react';
 
 export const useDrawer = (isOpen: boolean, animationDuration: number) => {
-	const {isActive, handleToggleActive} = useToggleActive(!isOpen);
+	const {isActive: isRemoveDom, handleToggleActive} = useToggleActive(!isOpen);
+	useLockBodyScroll(isOpen);
 
 	useEffect(() => {
 		if (isOpen) {
@@ -15,6 +16,6 @@ export const useDrawer = (isOpen: boolean, animationDuration: number) => {
 	}, [animationDuration, isOpen]);
 
 	return {
-		isActive,
+		isRemoveDom,
 	};
 };
