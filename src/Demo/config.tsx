@@ -119,7 +119,7 @@ export const demos: Config[] = [
 		component: <DemoBreadcrumb />,
 	},
 	{
-		label: 'DemoDrawer',
+		label: 'Drawer',
 		component: <DemoDrawer />,
 	},
 	{
