@@ -5,6 +5,7 @@ import {useRef} from 'react';
 const Panel = ({
 	panel,
 	isExpand = false,
+	extraHeight = 0,
 }: Props) => {
 	const panelRef = useRef<HTMLDivElement>(null);
 	const scrollHeight = panelRef.current?.scrollHeight ?? 0;
@@ -12,7 +13,7 @@ const Panel = ({
 	return (
 		<StyledPanel
 			ref={panelRef}
-			$maxHeight={isExpand ? scrollHeight : 0}
+			$height={isExpand ? scrollHeight + extraHeight : 0}
 		>
 			{panel}
 		</StyledPanel>

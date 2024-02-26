@@ -19,6 +19,7 @@ import {DemoBreadcrumb} from '@/Demo/components/DemoBreadcrumb.tsx';
 import {DemoSelect} from '@/Demo/components/DemoSelect.tsx';
 import {DemoDropdownSelect} from '@/Demo/components/DemoDropdownSelect.tsx';
 import {DemoDrawer} from './components/DemoDrawer.tsx';
+import {DemoTabs} from './components/DemoTabs.tsx';
 import Grid from '@/components/Grid';
 import {type Color} from '@/components/types.ts';
 import {theme} from '@/theme';
@@ -121,6 +122,10 @@ export const demos: Config[] = [
 	{
 		label: 'Drawer',
 		component: <DemoDrawer />,
+	},
+	{
+		label: 'Tabs',
+		component: <DemoTabs />,
 	},
 	{
 		label: 'InfiniteScroll',

@@ -1,6 +1,13 @@
 import styled from 'styled-components';
 import {type Color} from '@/components/types.ts';
 
+export const Wrapper = styled.div<{$gap?: number}>`
+	padding: 50px 20px;
+	display: flex;
+	justify-content: center;
+	border-top: 1px solid #fff;
+`;
+
 export const Title = styled.h1`
 	font-size: 30px;
 	font-weight: bold;
@@ -15,7 +22,7 @@ export const Intro = styled.p`
 `;
 
 export const Link = styled.a`
-	margin-bottom: 20px;
+	margin: 20px auto;
 	display: block;
 	color: #fff;
 	transition: transform .4s;
@@ -33,7 +40,6 @@ export const ListWrapper = styled.ul`
 `;
 
 export const List = styled.li`
-	padding: 20px 10px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;

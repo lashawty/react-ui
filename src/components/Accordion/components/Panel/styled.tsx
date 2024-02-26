@@ -1,9 +1,9 @@
 import styled from 'styled-components';
 
 export const StyledPanel = styled.div<{
-	$maxHeight: number;
+	$height: number;
 }>`
-	max-height: ${({$maxHeight}) => $maxHeight}px;
+	height: ${({$height}) => $height}px;
 	overflow: hidden;
-	transition: max-height 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+	transition: height 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 `;
