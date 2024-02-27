@@ -4,6 +4,7 @@ import {type ThemeColor} from '@/components/types.ts';
 export type Variant = 'contained' | 'outlined' | 'text';
 
 export type Props = {
+	type?: 'button' | 'reset' | 'submit';
 	variant?: Variant;
 	className?: string;
 	children?: ReactNode;

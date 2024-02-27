@@ -1,5 +1,5 @@
 import styled, {css} from 'styled-components';
-import {type Color, type ThemeKey} from '@/components/types.ts';
+import {type Theme, type Color} from '@/components/types.ts';
 
 export const Textarea = styled.textarea`
 	padding: 10px;
@@ -13,9 +13,7 @@ export const Textarea = styled.textarea`
 	line-height: 1.5;
 `;
 
-const errorStyle = css<{
-	theme: Record<ThemeKey, Color>;
-}>`
+const errorStyle = css<Theme>`
 	${Textarea} {
 		border: 2px solid ${props => props.theme.error};
 
@@ -25,9 +23,7 @@ const errorStyle = css<{
 	}
 `;
 
-const disabledStyle = css<{
-	theme: Record<ThemeKey, Color>;
-}>`
+const disabledStyle = css<Theme>`
 	cursor: not-allowed;
 	
 	.text-field__input {
@@ -47,9 +43,8 @@ const disabledStyle = css<{
 export const StyledTextarea = styled.div<{
 	$isError: boolean;
 	$isDisabled: boolean;
-	theme: Record<ThemeKey, Color>;
 	$color: Color;
-}>`
+} & Theme>`
 	display: flex;
 	align-items: center;
  	border: 1px solid #fff;

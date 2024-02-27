@@ -16,13 +16,14 @@ const Button = ({
 	startIcon = null,
 	endIcon = null,
 	onClick,
+	type = 'button',
 }: Props) => {
 	const {makeColor} = useColor();
 	const $btnColor = makeColor({themeColor, isDisabled});
 
 	return (
 		<StyledButton
-			type='button'
+			type={type}
 			className={className}
 			$btnColor={$btnColor}
 			$variant={variant}

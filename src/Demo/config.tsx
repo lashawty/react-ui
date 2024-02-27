@@ -76,8 +76,9 @@ export const demos: Config[] = [
 		component: <DemoTextField />,
 	},
 	{
-		label: 'Input',
+		label: 'Input & FormControl',
 		component: <DemoInput />,
+		github: 'https://github.com/lashawty/react-ui/tree/main/src/components/Input',
 	},
 	{
 		label: 'Slider',

@@ -14,3 +14,4 @@ export type ThemeKey = 'primary' | 'secondary' | 'disable' | 'error';
 export type ThemeColor = ThemeKey | Color;
 
 export type ThemeConfig = Record<ThemeKey, Color>;
+export type Theme = {theme: ThemeConfig};

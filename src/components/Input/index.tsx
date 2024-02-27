@@ -13,6 +13,7 @@ const Input = ({
 	type = 'text',
 	placeholder = 'Enter your text here',
 	label = '',
+	name = '',
 }: Props) => {
 	const {makeColor} = useColor();
 	const color = makeColor({themeColor, isDisabled});
@@ -37,6 +38,8 @@ const Input = ({
 				$color={color}
 				$isDisabled={isDisabled}
 				placeholder={placeholder}
+				name={name}
+				autoComplete={type}
 			/>
 		</Root>
 	);
